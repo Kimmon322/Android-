@@ -1,0 +1,119 @@
+import java.util.Random;
+
+
+
+public class Main {
+
+
+
+    public static void main(String[] args) {
+
+        Die d6 = new Die(6);    // 6 sided-die
+
+        Die d12 = new Die(12);  // 12 sided-die
+
+        Die skullCrusher = new Die(20);
+
+        System.out.printf("Rolling %d sided die : %d\n", d6.getSides(), d6.roll());
+
+        System.out.printf("Rolling %d sided die : %d\n", d12.getSides(), d12.roll());
+
+        System.out.printf("Rolling %d sided die : %d\n", skullCrusher.getSides(), skullCrusher.roll());
+
+    }
+
+}
+
+
+
+/**
+
+ * Different sided die simulation
+
+ */
+
+final class Die {
+
+
+
+    private int _sides;
+
+    private int _value;
+
+    private Random _generator;
+
+
+
+    // this is the constructor, called when you "new" the class.
+
+    public Die(int sides) {
+
+        this._sides = sides;
+
+        this._generator = new Random();
+
+        this.roll();    // roll it so it gets a value.
+
+    }
+
+
+
+    // overload, to pass in an existing seed
+
+    public Die(int sides, int seed) {
+
+        this._sides = sides;
+
+        this._generator = new Random(seed);
+
+        this.roll();    // roll it so it gets a value.
+
+    }
+
+
+
+    // get the number of sides on the die
+
+    public int getSides() {
+
+        return _sides;
+
+    }
+
+
+
+    // change the number of sides on the die
+
+    public int setSides(int sides) {
+
+        this._sides = sides;
+
+        return _sides;
+
+    }
+
+
+
+    // simulates a dice roll
+
+    public int roll() {
+
+        _value = _generator.nextInt(_sides) + 1;
+
+        return _value;
+
+    }
+
+
+
+    // get value showing on die
+
+    public int getValue() {
+
+        return _value;
+
+    }
+
+
+
+}
