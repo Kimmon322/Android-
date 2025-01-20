@@ -1,7 +1,13 @@
-## TWRP Minimal Manifests ##
-------------------
-There are manifests to build with the AOSP 11 & 12.1 branches, OmniROM 5.1-9.0 branches, and LineageOS 14.1 branch. As new Android versions are released, it becomes more and more difficult to maintain these minimal manifests, so pull requests are welcome!
+# Vanilla Ice Cream
 
-Note that each branch has its own README file which may include specific details about how to build on that branch. For example, starting with the 8.1 OmniROM branch, adding the command "export ALLOW_MISSING_DEPENDENCIES=true" to the command line is necessary to ensure a proper compile when using the minimal manifest. **Please make sure you read these files to be aware of such notes!**
+<img alt="Plat Logo" height="128" src="https://developer.android.com/about/versions/15/images/android-15-green.svg"/>
 
-If you find that any changes are needed, such as additional packages for required builds that need to be added, please submit a pull request for review. In some cases, it may make more sense to use a local manifest to pull device-specific packages.
+Android 15 , API 35
+
+## Egg
+
+Landroid
+
+## [Timeline, milestones, and updates](https://developer.android.com/about/versions/15/overview#timeline)
+
+![Timeline](https://developer.android.com/static/about/versions/15/images/timeline-desktop-en.png)
